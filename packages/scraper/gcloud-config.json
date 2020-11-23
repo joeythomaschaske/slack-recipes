@@ -1,0 +1,34 @@
+{
+    "resources": [
+        {
+            "name": "vm",
+            "type": "compute.v1.instance",
+            "properties": {
+                "zone": "us-central1-a",
+                "machineType": "zones/us-central1-a/machineTypes/f1-micro",
+                "disks": [
+                    {
+                        "deviceName": "boot",
+                        "boot": true,
+                        "autoDelete": true,
+                        "initializeParams": {
+                            "diskSizeGb": 10,
+                            "sourceImage": "projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts"
+                        }
+                    }
+                ],
+                "networkInterfaces": [
+                    {
+                        "name": "Internet Access",
+                        "accessConfigs": [
+                            {
+                                "name": "Egress Access",
+                                "type": "ONE_TO_ONE_NAT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "slack-recipes",
+  "version": "1.0.0",
+  "description": "Slack bot for coming up with recipes",
+  "scripts": {
+    "build": "rm -rf dist && tsc --project tsconfig.json",
+    "deploy": "zsh ./scripts/deploy.zsh",
+    "lint": "eslint src/**/*.ts --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^4.7.1",
+    "axios": "^0.21.0",
+    "cli-progress": "^3.8.2",
+    "jsdom": "16.4.0"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.8.0",
+    "@types/jsdom": "^16.2.5",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "typescript": "^3.4.3"
+  }
+}
